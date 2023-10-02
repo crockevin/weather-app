@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body class="bg-blue-500 p-5 h-auto">
+    <div id="title" class="text-center">
+        <h1>Weather Dashboard</h1>
+    </div>
+    <div id="layout" class="grid grid-cols-4 p-5">
+        <div id="searhSection" class="text-center bg-white m-10">Search of a city:
+            <div class="flex flex-col">
+                <input type="text" id="locationSearch" class="text-center">
+                <button id="searchButton" class="btn">Search</button>
+                <hr>
+                <button class="location m-2">Atlanta</button>
+                <button class="location m-2">Denver</button>
+                <button class="location m-2">Seattle</button>
+                <button class="location m-2">Orlando</button>
+                <button class="location m-2">New York</button>
+            </div>
+        </div>
+        <div id="weatherInput" class="col-span-2 text-center bg-white h-auto">Current Weather
+            <div id="todayWeather" class="float-left p-5 flex">Weather</div> 
+            <div class="float-left flex my-10">
+                <img src="https://openweathermap.org/img/wn/10d@4x.png">
+                <ul class="my-10">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </div> 
+
+        </div>
+
+
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
