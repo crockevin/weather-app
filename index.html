@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body class="bg-blue-500 p-5 h-auto">
+    <div id="title" class="text-center">
+        <h1 class="text-5xl">Weather Dashboard</h1>
+    </div>
+    <div id="layout" class="grid grid-cols-4 p-5">
+        <div id="searhSection" class="text-center bg-white m-10">Search of a city:
+            <div class="flex flex-col">
+                <input type="text" id="locationSearch" class="text-center">
+                <button id="searchButton" class="btn">Search</button>
+                <hr>
+                <button id="deland" class="location m-2">Deland</button>
+                <button id="denver" class="location m-2">Denver</button>
+                <button id="seattle" class="location m-2">Seattle</button>
+                <button id="orlando" class="location m-2">Orlando</button>
+            </div>
+        </div>
+        <div id="weatherInput" class="col-span-2 text-center bg-white h-auto text-3xl p-1">5 Day forecast
+            <hr>
+            <div id="todayWeather" class="float-left p-5 flex"></div>
+            <div class="flex justify-around my-10">
+                <ul id="forecast" class="flex my-10 flex-wrap bg-blue-500 ">
+
+                   
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
