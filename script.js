@@ -16,13 +16,15 @@ $(document).ready(function(){
                 var maxTemp = data.list[i].main.temp_max// gets max temp
                 var icon = "https://openweathermap.org/img/wn/" + icn + "@2x.png" // gets url with icon name
                 var date = data.list[i].dt_txt.split(' ')//splits date 
+                var windSpeed = data.list[i].wind.speed// get wind speed
                 var formatDate = date[0]// gets date on yyyy/
                 var li = $('<li>').addClass("border-2 border-solid p-5")
                 var h3 = $('<h3>').text(formatDate)
                 var img = $('<img>').attr('src', icon)
-                var h4MinTemp = $('<h4>').text(minTemp + '°')    
-                var h4MaxTemp =  $('<h4>').text(maxTemp + '°')
-                li.append(h3, img, h4MinTemp, h4MaxTemp)
+                var h4MinTemp = $('<h4>').text('Min:' + minTemp + '°')    
+                var h4MaxTemp =  $('<h4>').text('Max:' + maxTemp + '°')
+                var h4WindSpeed = $('<h4>').text('Wind:' + windSpeed)
+                li.append(h3, img, h4MinTemp, h4MaxTemp, h4WindSpeed)
                 appendForecast.append(li)//appends everything      
             }
             const weatherSave = {
